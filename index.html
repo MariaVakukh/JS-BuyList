@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="ua">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy List</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <section class="list">
+        <header>
+            <input type="text" class="add-iname" placeholder="Назва товару"/>  
+            <button class="add" data-tooltip="Add">Додати</button>
+        </header>
+        <hr>
+        <article class="item" >
+            <span class="name"><s>Помідори</s></span>
+            <span class="controls">
+                <span class="amount-left">2</span>
+            </span>
+            <span class="purchase" >
+                <button class="status" data-tooltip="Not bought">Не куплено</button>
+            </span>
+        </article>
+        <hr>
+        <article class="item">
+            <span class="name">Печиво</span>
+            <span class="controls">
+                <button class="minus" data-tooltip="Decrease">–</button>
+                <span class="amount-left">2</span>
+                <button class="plus" data-tooltip="Increase">+</button>
+            </span>
+            <span class="purchase">
+                <button class="status" data-tooltip="Bought">Куплено</button>
+                <button class="cancel" data-tooltip="Cancel">×</button>
+            </span>
+        </article>
+        <hr>
+        <article class="item">
+            <input type="text" id="text-field"/>
+            <span class="controls">
+                <button class="minus-off" data-tooltip="Decrease">–</button>
+                <span class="amount-left">1</span>
+                <button class="plus" data-tooltip="Increase">+</button>
+            </span>
+            <span class="purchase">
+                <button class="status" data-tooltip="Bought">Куплено</button>
+                <button class="cancel" data-tooltip="Cancel">×</button>
+            </span>
+        </article>
+    </section>
+
+    <section class="left-bought">
+        <article class="lb-item">
+            Залишилося
+        </article>
+        <hr>
+        <article class="lb-item">
+            <span class="product-item">
+                Печиво
+                <span class="amount">2</span>
+            </span>
+            <span class="product-item">
+                Сир
+                <span class="amount">1</span>
+            </span>
+        </article>
+        <hr>
+        <article class="lb-item">
+            Куплено
+        </article>
+        <hr>
+        <article class="lb-item">
+            <span class="product-item">
+                <s>Помідори</s>
+                <span class="amount">
+                    <s>2</s>
+                </span>
+            </span>
+        </article>
+    </section>
+
+<footer class="badge">
+    <span class="badge-text">BuyList</span>
+    <span class="badge-hover">created by: Vakukh Maria</span>
+</footer>
 </body>
 </html>
